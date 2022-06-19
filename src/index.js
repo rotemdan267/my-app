@@ -1,17 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import OtherComponent from './MyOtherComponent';
+import ComponentAsClass from './ComponentAsClass';
+import Countries from './Countries';
+
+function MyComponent() {
+  return (
+    <React.Fragment>
+      <h1>List of Components:</h1>
+      <OtherComponent></OtherComponent>
+      <br/>
+      <ComponentAsClass></ComponentAsClass>
+      <ComponentAsClass />
+      <Countries></Countries>
+    </React.Fragment>);
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+  <MyComponent></MyComponent>
+  // <MyComponent />
+  // <OtherComponent></OtherComponent>
+  // <ComponentAsClass></ComponentAsClass>
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  // <Countries></Countries>
+);
